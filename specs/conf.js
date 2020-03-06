@@ -32,7 +32,6 @@ exports.config =
 
         login: {
           email: 'annie_asad@outlook.com',
-          password: 'admin'
         }},
 
       onPrepare() {

@@ -1,8 +1,8 @@
 const locate = function()
 {
-  let signInBtn = element(by.xpath(".//a[text()='Sign in']"))
-  let emailAddress = element(by.id("i0116"))
-  let nextBtn = element(by.id("idSIButton9"))
+  let signInBtn = element(by.xpath(".//a[text()='Sign in']"));
+  let emailAddress = element(by.id("i0116"));
+  let nextBtn = element(by.id("idSIButton9"));
 
   this.clickSignInBtn = () => {
     signInBtn.click();
