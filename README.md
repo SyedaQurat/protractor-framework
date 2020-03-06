@@ -11,11 +11,16 @@ Install here: https://nodejs.org/en/download/
 # Protractor Installation:
 a. After downloading the pre-requisite, open cmd in the respective directory & type following command and hit Enter.
 
-```npm install protractor```
+```npm i protractor```
 
 b. Start the web driver manager by executing following command.
 
 ```webdriver-manager start```
+
+c. By executing following command, all the dependencies in *package.json* will be download locally
+
+```npm i```
+
 
 
 # Code Execution:

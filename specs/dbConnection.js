@@ -22,7 +22,7 @@ const sqlConnect = function() {
   this.queryExecution = successHandler => {
     //Execute your query
     console.log("Execute your query")
-    var sql = "The SQL Query"
+    var sql = "Your SQL Query"
     this.connection.query(sql, function(err, rows) {
       if (err) {
         console.log(err)

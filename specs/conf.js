@@ -1,42 +1,57 @@
 'use strict';
 
-const jasminetwo = require("protractor-jasmine2-html-reporter")
+/*Reporting via "protractor-jasmine2-html-reporter" */
+//var jasmineObject = require('protractor-jasmine2-html-reporter')
 
-exports.config = {
 
-  seleniumAddress: "http://localhost:4444/wd/hub",
+/*Reporting via "protractor-beautiful-reporter" */
+var beautifulObject = require('protractor-beautiful-reporter');
 
-  capabilities: {
-    browserName: "firefox"
-  },
+exports.config =
+    {
+      seleniumAddress: 'http://localhost:4444/wd/hub',
 
-  framework: "jasmine",
+      capabilities: {
+        browserName: 'chrome'
+      },
 
-  suites: {
-    loginSpecs: ["loginSuccessfullyTest.js", "loginUnsuccessfullyTest.js"]
-  },
+     suites: {
+        login: ["../test-cases/login.js"],
 
-  baseUrl: "baseUrl of Your Website",
+      },
 
-  params: {
-    login: {
-      id: "credentials",
-      password: "credentials"
-    }
-  },
+      scripts: {
+        start: "protractor specs/conf.js"
+      },
 
-  generateReport() {
-    jasmine.getEnv().addReporter(new jasminetwo({savePath: './reports'})
-    );
-  },
+      framework: 'jasmine',
 
-  onPrepare() {
-    browser.waitForAngularEnabled(false);
-    browser.get(browser.baseUrl);
-    browser.driver.manage().window().maximize();
-  },
+      baseUrl: 'https://outlook.live.com/owa/',
 
-  onComplete() {
-    browser.driver.close();
-  },
-}
+      params: {
+
+        login: {
+          email: 'annie_asad@outlook.com',
+          password: 'admin'
+        }},
+
+      onPrepare() {
+        browser.waitForAngularEnabled(false);
+        browser.get(browser.baseUrl);
+        browser.driver.manage().window().maximize();
+
+        /*protractor-jasmine2-html-reporter*/
+        //jasmine.getEnv().addReporter(new jasmineObject({savePath: 'reports'}))
+
+
+        /*protractor-beautiful-reporter*/
+        jasmine.getEnv().addReporter(new beautifulObject({baseDirectory: 'Reports'}).getJasmine2Reporter());
+      },
+
+      onComplete() {
+        browser.driver.close();
+      },
+
+
+    };
+

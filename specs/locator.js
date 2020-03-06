@@ -1,24 +1,22 @@
-const locate = function() {
-  let ById = element(by.id("id"))
-  let ByClassName = element(by.css("class-name"))
-  let ByBinding = element(by.binding("binding-name"))
-  let ByName = element(by.name("xpath"))
+const locate = function()
+{
+  let signInBtn = element(by.xpath(".//a[text()='Sign in']"))
+  let emailAddress = element(by.id("i0116"))
+  let nextBtn = element(by.id("idSIButton9"))
 
-  this.findById = () => {
-    ById.sendKeys(browser.params.login.id)
-  }
+  this.clickSignInBtn = () => {
+    signInBtn.click();
+  };
 
-  this.findByClassName = () => {
-    ByClassName.sendKeys(browser.params.login.password)
-  }
+  this.sendEmail = () => {
+    emailAddress.click();
+    emailAddress.sendKeys(browser.params.login.email);
+  };
 
-  this.findByXpath = () => {
-    ByBinding.click()
-  }
+  this.clickNextBtn = () => {
+    nextBtn.click();
+  };
 
-  this.clickdashboard = () => {
-    ByName.click()
-  }
 }
 
 module.exports = new locate()
