@@ -34,7 +34,8 @@ exports.config =
 
         login: {
           email: 'annie_asad@outlook.com',
-        }},
+        }
+        },
 
       onPrepare() {
         browser.waitForAngularEnabled(false);
