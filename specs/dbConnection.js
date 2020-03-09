@@ -1,3 +1,6 @@
+/*created by Syeda Quratulain Asad*/
+
+
 const sqlConnect = function() {
   this.connectDB = () => {
     //Import mysql

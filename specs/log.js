@@ -1,3 +1,5 @@
+/*created by SQA*/
+
 'use strict';
 //initialization of log4js library
 const log4js = require('log4js');

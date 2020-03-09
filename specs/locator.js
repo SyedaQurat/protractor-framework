@@ -1,3 +1,5 @@
+/*created by Syeda Quratulain Asad*/
+
 const locate = function()
 {
   let signInBtn = element(by.xpath(".//a[text()='Sign in']"));
