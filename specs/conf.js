@@ -18,7 +18,7 @@ exports.config =
       },
 
      suites: {
-        login: ["../test-cases/login.js"],
+        login: ["../test-cases/search.js"],
 
       },
 
