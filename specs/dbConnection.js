@@ -1,40 +1,31 @@
 /*created by Syeda Quratulain Asad*/
 
 
+var locate = require('../specs/locator.js');
+
 const sqlConnect = function() {
+
   this.connectDB = () => {
     //Import mysql
     var mysql = require("mysql")
 
     // Creation of connection with database
-    console.log("Creation of connection with database")
-
     this.connection = mysql.createConnection({
-      host: "hostname",
-      port: "port-number",
-      user: "username",
-      password: "pwd",
-      database: "name of db"
+      host: "localhost",
+      port: "3306",
+      user: "root",
+      password: "root",
+      database: "googleinfo"
     })
+
     //Connection with your database
-    console.log("Connection with your database")
     this.connection.connect()
   }
 
+
   this.queryExecution = successHandler => {
     //Execute your query
-    console.log("Execute your query")
-    var sql = "The SQL Query"
-    this.connection.query(sql, function(err, rows) {
-      if (err) {
-        console.log(err)
-      } else {
-        Object.keys(rows).forEach(function(items) {
-          var row = rows[items]
-          successHandler(row)
-        })
-      }
-    })
+    var sql = 'INSERT INTO test_table (id, title, results, seconds) values (1)';
   }
 }
 
