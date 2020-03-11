@@ -9,7 +9,6 @@ const sqlConnect = function() {
     // Creation of connection with database
     console.log("Creation of connection with database")
 
-    // That should be in .env file or SHOULD BE RETURN AS CAPS : HOST_NAME
     this.connection = mysql.createConnection({
       host: "hostname",
       port: "port-number",

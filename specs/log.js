@@ -1,4 +1,5 @@
-/*created by SQA*/
+/*created by Syeda Quratulain Asad*/
+
 
 'use strict';
 //initialization of log4js library

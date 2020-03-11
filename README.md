@@ -1,7 +1,4 @@
 # Pre-Requisite:
-- Selenium WebDriver,
-Install here: https://www.seleniumhq.org/download/
-
 - NodeJS,
 Install here: https://nodejs.org/en/download/
 
@@ -9,21 +6,24 @@ Install here: https://nodejs.org/en/download/
 
 
 # Protractor Installation:
-a. After downloading the pre-requisite, open cmd in the respective directory & type following command and hit Enter.
+a. By executing following command, all the dependencies in *package.json* will be download locally
 
-```npm i protractor```
+```npm i```
 
 b. Start the web driver manager by executing following command.
 
 ```webdriver-manager start```
 
-c. By executing following command, all the dependencies in *package.json* will be download locally
+c. If incase, webdriver requires updates. Type following:
 
-```npm i```
-
+```webdriver-manager update```
 
 
 # Code Execution:
-To execute the code of protractor, open cmd in the directory & type following. *conf.js* is the configuration file having address & specs test file
+To execute the code of protractor, open cmd in the directory & navigate to specs folder.
+ 
+ ```cd specs```
+ 
+ & noe type following to run the framework
 
 ```protractor conf.js```

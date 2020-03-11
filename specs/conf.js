@@ -28,12 +28,12 @@ exports.config =
 
       framework: 'jasmine',
 
-      baseUrl: 'https://outlook.live.com/owa/',
+      baseUrl: 'https://www.google.com/',
 
       params: {
 
-        login: {
-          email: 'annie_asad@outlook.com',
+        title: {
+          textToDisplay: 'what is selenium?',
         }
         },
 

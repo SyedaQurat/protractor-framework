@@ -1,2 +1,5 @@
-.idea/
-/node_modules
+.idea
+node_modules
+Reports
+project.log
+specs/logs/project.log

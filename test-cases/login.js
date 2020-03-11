@@ -1,20 +1,19 @@
-describe('Scenario: Successful login', function () {
+describe('Scenario: Google search', function () {
 
     var locate = require('../specs/locator.js');
     var logger = require('../specs/log.js')("Login Success");
 
 
-    fit('It should login with correct credentials', function () {
+    fit('It should search on google', function () {
 
-        locate.clickSignInBtn()
-        logger.logLevelInfo("Sign In Button is clicked")
+        locate.sendInput();
 
-        browser.sleep(5000)
-        locate.sendEmail()
+        locate.hitEnterKey();
+        logger.logLevelInfo("Enter key is clicked")
 
-        expect(browser.getTitle()).toEqual('Sign in to your Microsoft account')
+        //Assertion of title
+        expect(browser.getTitle()).toEqual('what is selenium? - Google Search')
 
-        locate.clickNextBtn()
 
     });
 

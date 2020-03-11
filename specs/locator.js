@@ -2,22 +2,20 @@
 
 const locate = function()
 {
-  let signInBtn = element(by.xpath(".//a[text()='Sign in']"));
-  let emailAddress = element(by.id("i0116"));
-  let nextBtn = element(by.id("idSIButton9"));
+  let searchInputField = element(by.xpath("//*[@id=\"tsf\"]/div[2]/div[1]/div[1]/div/div[2]/input"));
+  let title = element(by.xpath("//*[@id=\"tsf\"]/div[2]/div[1]/div[2]/div/div[2]/input"))
+  let results = element(by.xpath("//*[@id=\"result-stats\"]/text()"))
+  let seconds  = element(by.xpath("//*[@id=\"result-stats\"]/nobr"))
 
-  this.clickSignInBtn = () => {
-    signInBtn.click();
-  };
+  this.sendInput = () => {
+    searchInputField.click();
+    searchInputField.sendKeys(browser.params.title.textToDisplay);
+   };
 
-  this.sendEmail = () => {
-    emailAddress.click();
-    emailAddress.sendKeys(browser.params.login.email);
-  };
-
-  this.clickNextBtn = () => {
-    nextBtn.click();
-  };
+  this.hitEnterKey=() =>
+  {
+    searchInputField.sendKeys(protractor.Key.ENTER);
+  }
 
 }
 
