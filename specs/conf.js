@@ -25,7 +25,7 @@ exports.config =
         },
 
         suites: {
-          search: ["../test-cases/search.js"],
+         search: ["../test-cases/search.js"],
           searchDB: ["../test-cases/databaseSearch.js"]
      },
 

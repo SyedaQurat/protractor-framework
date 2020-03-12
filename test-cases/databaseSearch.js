@@ -4,7 +4,7 @@ describe('Scenario: Google search', function () {
     var logger = require('../specs/log.js')("Successful database search");
 
 
-    fit('It should within database ', function () {
+    fit('It search within database ', function () {
 
         sql.connectDB();
         logger.logLevelInfo("connectDB")
