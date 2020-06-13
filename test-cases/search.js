@@ -13,6 +13,7 @@ describe('Scenario: Google search', function () {
 
         //Assertion of title
         expect(browser.getTitle()).toEqual('what is selenium? - Google Search')
+        console.log(browser.getTitle());
 
 
     });
