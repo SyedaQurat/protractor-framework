@@ -9,12 +9,11 @@ var beautifulObject = require('protractor-beautiful-reporter');
 
 exports.config =
     {
-      seleniumAddress: 'http://localhost:4444/wd/hub',
-
-      capabilities: {
+      //seleniumAddress: 'http://localhost:4444/wd/hub',
+        capabilities: {
         browserName: 'chrome'
       },
-        directConnect: true,
+     directConnect: true,
 
       framework: 'jasmine',
 
