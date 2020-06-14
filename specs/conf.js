@@ -11,12 +11,12 @@ exports.config =
     {
       //seleniumAddress: 'http://localhost:4444/wd/hub',
         capabilities: {
-        browserName: 'chrome',
+            'browserName': 'chrome',
             'chromeOptions': {
-                args: ['--no-sandbox']
+                'args': ['no-sandbox']
             }
-      },
-     directConnect: true,
+        },
+        directConnect: true,
 
       framework: 'jasmine',
 
