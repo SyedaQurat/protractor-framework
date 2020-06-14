@@ -11,8 +11,9 @@ exports.config =
     {
       //seleniumAddress: 'http://localhost:4444/wd/hub',
         capabilities: {
-            'browserName': 'chrome',
-            'chromeOptions': {
+            browserName: 'chrome',
+            chromeOnly: true,
+            chromeOptions: {
                 'args': ['no-sandbox']
             }
         },
