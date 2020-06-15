@@ -15,22 +15,24 @@ exports.config =
             chromeOnly: false,
             chromeOptions: {
                 'args': ['no-sandbox', 'disable-dev-shm-usage', 'headless']
+                //'args': ['no-sandbox']
+
             }
         },
         directConnect: true,
 
       framework: 'jasmine',
 
-      baseUrl: 'https://www.google.com/',
+      baseUrl: 'https://bing.com',
         params: {
             title: {
-                textToDisplay: 'what is selenium?',
+                textToDisplay: 'what is selenium?'
             }
         },
 
         suites: {
          search: ["../test-cases/search.js"],
-          searchDB: ["../test-cases/databaseSearch.js"]
+         // searchDB: ["../test-cases/databaseSearch.js"]
      },
 
       scripts: {
@@ -49,8 +51,8 @@ exports.config =
           //jasmine.getEnv().addReporter(new jasmineObject({savePath: 'reports'}))
       },
 
-      onComplete() {
-        browser.driver.close();
-      }
+      // onComplete() {
+      //   browser.driver.close();
+      // }
  };
 

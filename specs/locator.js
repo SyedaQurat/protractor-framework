@@ -2,20 +2,27 @@
 
 const locate = function()
 {
-  let searchInputField = element(by.xpath("//*[@id=\"tsf\"]/div[2]/div[1]/div[1]/div/div[2]/input"));
+  //let searchInputField = element(by.xpath("//*[@id=\"tsf\"]/div[2]/div[1]/div[1]/div/div[2]/input"));
+  let searchByBing = element(by.id("sb_form_q"));
   let title = element(by.xpath("//*[@id=\"tsf\"]/div[2]/div[1]/div[2]/div/div[2]/input"))
   let results = element(by.id('result-stats'));
-  // element(by.xpath('//div[contains(text(), "results")]'))
   let seconds  = element(by.xpath("//*[@id=\"result-stats\"]/nobr"))
 
+  /*
   this.sendInput = () => {
     searchInputField.click();
     searchInputField.sendKeys(browser.params.title.textToDisplay);
    };
+*/
+
+  this.sendInput = () => {
+    searchByBing.click();
+    searchByBing.sendKeys(browser.params.title.textToDisplay);
+  };
 
   this.hitEnterKey=() =>
   {
-    searchInputField.sendKeys(protractor.Key.ENTER);
+    searchByBing.sendKeys(protractor.Key.ENTER);
   }
 
 
