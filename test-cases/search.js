@@ -7,15 +7,12 @@ describe('Scenario: Google search', function () {
     fit('It should search on google', function () {
 
         locate.sendInput();
-        logger.logLevelInfo("sendInput")
+       // logger.logLevelInfo("sendInput")
         locate.hitEnterKey();
-        logger.logLevelInfo("hitEnterKey")
+        //logger.logLevelInfo("hitEnterKey")
 
         //Assertion of title
-        expect(browser.getTitle()).toEqual('what is selenium? - Google Search')
-        console.log(browser.getTitle());
-
-
+        expect(browser.getTitle()).toEqual('what is selenium? - Bing')
     });
 
 });
