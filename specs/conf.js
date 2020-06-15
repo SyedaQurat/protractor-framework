@@ -12,9 +12,9 @@ exports.config =
       //seleniumAddress: 'http://localhost:4444/wd/hub',
         capabilities: {
             browserName: 'chrome',
-            chromeOnly: true,
+            chromeOnly: false,
             chromeOptions: {
-                'args': ['no-sandbox']
+                'args': ['no-sandbox', 'disable-dev-shm-usage']
             }
         },
         directConnect: true,
