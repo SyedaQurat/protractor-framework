@@ -14,7 +14,7 @@ exports.config =
             browserName: 'chrome',
             chromeOnly: false,
             chromeOptions: {
-                'args': ['no-sandbox', 'disable-dev-shm-usage']
+                'args': ['no-sandbox', 'disable-dev-shm-usage', 'headless']
             }
         },
         directConnect: true,
